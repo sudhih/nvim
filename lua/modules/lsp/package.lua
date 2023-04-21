@@ -58,7 +58,7 @@ end
 
 packadd({
   'neovim/nvim-lspconfig',
-  dev = true,
+--dev = true,
   ft = lsp_fts(),
   config = function()
     if not loaded then
@@ -74,7 +74,7 @@ packadd({
   'nvimdev/lspsaga.nvim',
   event = 'LspAttach',
   cmd = 'Lspsaga term_toggle',
-  dev = true,
+  --dev = true,
   config = function()
     require('lspsaga').setup({
       symbol_in_winbar = {

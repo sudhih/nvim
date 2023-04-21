@@ -2,7 +2,7 @@ local conf = require('modules.ui.config')
 
 packadd({
   'nvimdev/dashboard-nvim',
-  dev = true,
+  -- dev = true,
   event = 'VimEnter',
   config = conf.dashboard,
   dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -10,7 +10,7 @@ packadd({
 
 packadd({
   'nvimdev/whiskyline.nvim',
-  dev = true,
+  --dev = true,
   config = conf.whisky,
   dependencies = { 'nvim-tree/nvim-web-devicons' },
 })
@@ -23,7 +23,7 @@ packadd({
 
 packadd({
   'nvimdev/indentmini.nvim',
-  dev = true,
+  --dev = true,
   event = { 'BufEnter' },
   config = function()
     require('indentmini').setup({})
