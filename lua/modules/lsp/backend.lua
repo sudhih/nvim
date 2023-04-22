@@ -109,6 +109,7 @@ local servers = {
   'pyright',
   'bashls',
   'zls',
+  'zk'
 }
 
 for _, server in ipairs(servers) do

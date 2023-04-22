@@ -14,14 +14,14 @@ function config.easyformat()
   configs.lua = {
     ignore_patterns = { '%pspec', 'neovim/*' },
   }
-  configs.c = {
-    ignore_patterns = { 'neovim/*' },
-  }
+  -- configs.c = {
+  --   ignore_patterns = { 'neovim/*' },
+  -- }
   configs.use_default({
-    'cpp',
-    'go',
+    -- 'cpp',
+    -- 'go',
     'rust',
-    'javascriptreact',
+    -- 'javascriptreact',
   })
   require('easyformat').setup({
     fmt_on_save = true,
