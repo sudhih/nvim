@@ -70,3 +70,8 @@ map.n('gcj', cmd('ComAnnotation'))
 map.nt('<A-d>', cmd('Lspsaga term_toggle'))
 
 map.nx('ga', cmd('Lspsaga code_action'))
+
+
+-- zk-nvim 
+map.n('<leader>zn', cmd('ZkNew<CR>'))
+map.n('<leader>zo', cmd("ZkNotes { sort = { 'modified' }, }<CR>"))
