@@ -1,5 +1,6 @@
 local M = {}
 local lspconfig = require('lspconfig')
+local util = require('lspconfig.util')
 
 ---@diagnostic disable-next-line: unused-local
 function M._attach(client, bufnr)
@@ -104,9 +105,20 @@ lspconfig.rust_analyzer.setup({
   },
 })
 
+lspconfig.pyright.setup({
+  on_attach = M._attach,
+  on_init = function(client)
+    if vim.env.VIRTUAL_ENV then
+      client.config.settings.python.pythonPath = util.path.join(vim.env.VIRTUAL_ENV, "bin", "python")
+    else
+      client.config.settings.python.pythonPath = vim.fn.exepath("python3")
+    end
+  end
+})
+
 local servers = {
   'dockerls',
-  'pyright',
+  -- 'pyright',
   'bashls',
   'zls',
   'zk'
