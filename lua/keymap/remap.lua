@@ -16,6 +16,7 @@ map.n({
   ['<C-k>'] = '<C-w>k',
   ['<A-[>'] = cmd('vertical resize -5'),
   ['<A-]>'] = cmd('vertical resize +5'),
+  ['fj'] = '<ESC>',
 })
 
 map.i({
@@ -29,6 +30,7 @@ map.i({
   ['<C-p>'] = '<Up>',
   ['<A-j>'] = '<C-o>o',
   ['<A-k>'] = '<C-o>O',
+  ['fj'] = '<ESC>'
 })
 
 map.i('<c-e>', function()
@@ -42,6 +44,7 @@ map.c({
   ['<C-e>'] = '<End>',
   ['<C-d>'] = '<Del>',
   ['<C-h>'] = '<BS>',
+  ['fj'] = '<ESC>'
 })
 
 map.t('<Esc>', [[<C-\><C-n>]])
