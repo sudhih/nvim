@@ -116,12 +116,24 @@ lspconfig.pyright.setup({
   end
 })
 
+-- zk-nvim settings
+require('zk').setup({
+  picker = "telescope",
+  lsp = {
+    on_attach = M._attach
+  },
+  auto_attac = {
+    enabled = true,
+    filetypes = {'markdown', 'python', 'lua', 'zsh'},
+  }
+})
+
 local servers = {
   'dockerls',
   -- 'pyright',
   'bashls',
   'zls',
-  'zk'
+  -- 'zk'
 }
 
 for _, server in ipairs(servers) do

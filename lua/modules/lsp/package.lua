@@ -89,14 +89,14 @@ packadd({
   event = 'LspAttach',
   -- Because i want to trigger `zk` command from any buffer
   -- ft = 'markdown',
-  config = function()
-    require('zk').setup({
-      picker = "telescope",
+  -- config = function()
+  --   require('zk').setup({
+  --     picker = "telescope",
       -- automatically attach buffers in a zk notebook that match given filetypes
-      auto_attach = {
-        enabled = true,
-        filetypes = {'markdown', 'python', 'lua'}
-      }
-    })
-  end,
+  --     auto_attach = {
+  --       enabled = true,
+  --       filetypes = {'markdown', 'python', 'lua'}
+  --     }
+  --   })
+  -- end,
 })
